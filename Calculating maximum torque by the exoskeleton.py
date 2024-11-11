@@ -17,7 +17,7 @@ d_exo = 0.046   # Distance from wrist joint to center of mass of exoskeleton (m)
 d_hand = 0.056  # Distance from wrist joint to center of mass of hand (m)
 g = 9.81        # Gravitational acceleration (m/s^2)
 kappa = 0.08     # Spring constant (Nm/rad)
-c = 2         # Damping constant (Nm s/rad)
+c = 2.054         # Damping constant (Nm s/rad)
 
 # Calculated constants based on above values
 I = m_exo * d_exo**2 + m_hand * d_hand**2   # Moment of inertia (kg m^2)
@@ -34,7 +34,7 @@ def equation_of_motion(t, y):
     return [theta_dot, theta_double_dot]
 
 # Time span for simulation
-time_span = (0, 20)                # Simulate for 10 seconds
+time_span = (0, 20)                # Simulate for 20 seconds
 time_eval = np.linspace(0, 10, 1000)  # Increase points for better resolution
 
 # Solve the differential equation
